@@ -6,6 +6,7 @@ import java.awt.event.*;
 public class TicTacToe implements ActionListener {
 
     Random random = new Random();
+
     JFrame jFrame = new JFrame();
 
     JPanel jPanel_Title = new JPanel();
@@ -80,7 +81,7 @@ public class TicTacToe implements ActionListener {
                         playerOneTurns = false;
                         textfield.setText("O Turn");
 
-                        // check if we have winner in the game
+                        // check if X wins
                         check();
                     }
                 } else {
@@ -89,6 +90,7 @@ public class TicTacToe implements ActionListener {
                     playerOneTurns = true;
                     textfield.setText("X Turn");
 
+                    // check if O wins
                     check();
                 }
             }
@@ -189,6 +191,13 @@ public class TicTacToe implements ActionListener {
             jButtons[i].setEnabled(false);
         }
         textfield.setText("O wins");
+    }
+
+    //TODO Feel up the method with action!
+    // Play Again Option
+    public void playAgain(){
+
+
     }
 
 }
